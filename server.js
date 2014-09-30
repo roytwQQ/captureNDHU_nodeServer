@@ -86,7 +86,6 @@ app.get('/api/todos', function(req, res) {
 // 	});
 
 app.post('/api/upload', multipartMiddleware, function(req, res, next) {
-	console.log('!!!!!!@');
 var img = req.files.photo.image;
 var name = req.body.photo.name || img.name;
 var path = join(app.get('photos'), img.name);
